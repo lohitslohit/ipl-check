@@ -1,0 +1,40 @@
+{% extends "layout.html"%}
+
+{% block content %}
+
+<div class="display__container">
+  <h2 style="font-weight:600;text-align:center;">LIVE SCORE</h2>
+
+  <div class="row">
+    {% for title_list,score_team1,score_team2,day_result in live_result %}
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.abc.net.au/news/image/5514196-3x2-940x627.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">{{title_list}}</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Team 1 Score :</b>{{score_team1}}</li>
+        <li class="list-group-item"><b>Team 2 Score :</b>{{score_team2}}</li>
+        <li class="list-group-item">{{day_result}}</li>
+        </ul>
+
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+  
